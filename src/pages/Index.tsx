@@ -140,7 +140,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-primary to-background">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold text-accent mb-6 animate-fade-in">
-            Перетяжка мебели<br />в Москве
+            Перетяжка мебели<br />в Новороссийске
           </h2>
           <p className="text-2xl text-accent/90 max-w-2xl mx-auto mb-4 animate-fade-in">
             Бесплатный выезд мастера
@@ -305,7 +305,7 @@ const Index = () => {
                   </a>
                 </div>
                 <p className="text-muted-foreground">Работаем ежедневно с 9:00 до 22:00</p>
-                <p className="text-muted-foreground">Москва и Московская область</p>
+                <p className="text-muted-foreground">г. Новороссийск, ул. Кутузовская, 117</p>
               </div>
             </CardContent>
           </Card>
