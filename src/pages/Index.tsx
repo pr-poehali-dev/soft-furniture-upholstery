@@ -78,7 +78,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-accent/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-primary">Мастерская Люкс</h1>
+          <h1 className="text-2xl font-bold text-primary">Мастерская Тах-та</h1>
           <div className="hidden md:flex gap-6">
             <a href="#services" className="text-foreground hover:text-accent transition-colors">Услуги</a>
             <a href="#portfolio" className="text-foreground hover:text-accent transition-colors">Портфолио</a>
@@ -97,7 +97,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-6xl md:text-7xl font-bold text-primary mb-6 animate-fade-in">
-            Перетяжка мебели<br />премиум-класса
+            Перетяжка и ремонт<br />мягкой мебели
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in">
             Вдыхаем новую жизнь в вашу любимую мебель. Европейское качество, внимание к деталям, роскошные материалы.
