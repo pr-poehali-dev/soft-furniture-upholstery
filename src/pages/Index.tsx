@@ -31,7 +31,7 @@ const Index = () => {
     {
       icon: "Star",
       title: "Опыт 10+ лет",
-      description: "Более 800 довольных клиентов доверили нам свою мебель"
+      description: "Работаем с 2015 года. Сотни довольных клиентов"
     },
     {
       icon: "Sparkles",
@@ -118,9 +118,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-accent/30">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-accent">Мастерская Тах-та</h1>
-            <p className="text-sm text-accent/80">Перетяжка и ремонт мягкой мебели</p>
+          <div className="flex items-center gap-4">
+            <img 
+              src="https://cdn.poehali.dev/files/b41176a0-bbe2-405b-854e-028bd40e1f5f.jpeg" 
+              alt="Мастерская Тах-та" 
+              className="h-12 w-12 object-contain"
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-accent">Мастерская Тах-та</h1>
+              <p className="text-sm text-accent/80">Перетяжка и ремонт мягкой мебели</p>
+            </div>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <div className="text-right">
@@ -157,7 +164,7 @@ const Index = () => {
       <section id="advantages" className="py-20 px-4 bg-card">
         <div className="container mx-auto">
           <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">
-            Почему 800+ клиентов доверили мебель нам?
+            Почему выбирают именно нас?
           </h3>
           <p className="text-center text-muted-foreground mb-12">Наши преимущества</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -444,6 +451,13 @@ const Index = () => {
 
       <footer className="bg-primary text-accent py-12 px-4 border-t-2 border-accent/30">
         <div className="container mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            <img 
+              src="https://cdn.poehali.dev/files/b41176a0-bbe2-405b-854e-028bd40e1f5f.jpeg" 
+              alt="Мастерская Тах-та" 
+              className="h-20 w-20 object-contain"
+            />
+          </div>
           <h2 className="text-3xl font-bold mb-4">Мастерская Тах-та</h2>
           <p className="text-accent/80 mb-6">Перетяжка и ремонт мягкой мебели с 2015 года</p>
           <div className="flex gap-4 justify-center mb-6">
