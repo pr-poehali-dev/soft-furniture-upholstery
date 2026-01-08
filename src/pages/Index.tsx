@@ -122,11 +122,11 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/b41176a0-bbe2-405b-854e-028bd40e1f5f.jpeg" 
               alt="Мастерская Тах-та" 
-              className="h-12 w-12 object-contain"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain"
             />
             <div>
-              <h1 className="text-2xl font-bold text-primary">Мастерская Тах-та</h1>
-              <p className="text-sm text-muted-foreground">Перетяжка и ремонт мягкой мебели</p>
+              <h1 className="text-xl md:text-3xl font-bold text-primary">Мастерская Тах-та</h1>
+              <p className="text-xs md:text-sm text-muted-foreground">Перетяжка и ремонт мягкой мебели</p>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -163,19 +163,23 @@ const Index = () => {
 
       <section id="advantages" className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-primary mb-3">
             Почему выбирают именно нас?
           </h3>
-          <p className="text-center text-muted-foreground mb-12">Наши преимущества</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <p className="text-center text-muted-foreground mb-10">Наши преимущества</p>
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {advantages.map((item, idx) => (
-              <Card key={idx} className="border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl bg-card">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-                    <Icon name={item.icon as any} size={32} className="text-accent" />
+              <Card key={idx} className="border-2 border-primary/20 hover:border-accent transition-all hover:shadow-lg bg-card">
+                <CardContent className="pt-4 pb-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name={item.icon as any} size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary mb-1">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-semibold text-primary mb-2">{item.title}</h4>
-                  <p className="text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
