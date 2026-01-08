@@ -147,7 +147,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4 bg-primary">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold text-accent mb-6 animate-fade-in">
-            Перетяжка мебели<br />в Новороссийске
+            Перетяжка мебели<br />Новороссийск - Геленджик
           </h2>
           <p className="text-2xl text-accent/90 max-w-2xl mx-auto mb-4 animate-fade-in">
             Бесплатный выезд мастера
