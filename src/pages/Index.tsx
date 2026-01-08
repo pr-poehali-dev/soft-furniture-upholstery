@@ -312,6 +312,55 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto">
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Как нас найти</h3>
+          <p className="text-center text-muted-foreground mb-12">г. Новороссийск, ул. Кутузовская, 117</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="rounded-lg overflow-hidden border-2 border-accent/30 shadow-xl">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc7c0e9ab9e8f7f4e3d2b3c0f9e8d7c6d5b4a3c2b1a0&amp;source=constructor"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                style={{ border: 0 }}
+                allowFullScreen
+                title="Карта с адресом"
+              ></iframe>
+            </div>
+            <div className="mt-8 grid md:grid-cols-2 gap-6">
+              <Card className="border-2 border-accent/30 bg-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="MapPin" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-accent mb-2">Адрес мастерской</h4>
+                      <p className="text-muted-foreground">г. Новороссийск, ул. Кутузовская, 117</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-2 border-accent/30 bg-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Clock" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-accent mb-2">Режим работы</h4>
+                      <p className="text-muted-foreground">Ежедневно с 9:00 до 22:00</p>
+                      <p className="text-muted-foreground text-sm mt-1">Без выходных</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
         <a 
           href="https://wa.me/79298333318" 
