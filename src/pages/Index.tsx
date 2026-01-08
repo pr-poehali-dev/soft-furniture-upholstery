@@ -298,10 +298,29 @@ const Index = () => {
         </div>
       </section>
 
+      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
+        <a 
+          href="https://wa.me/79298333318" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 animate-scale-in"
+        >
+          <Icon name="MessageCircle" size={28} className="text-white" />
+        </a>
+        <a 
+          href="https://t.me/+79298333318" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-[#0088cc] hover:bg-[#0077b5] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 animate-scale-in"
+        >
+          <Icon name="Send" size={26} className="text-white" />
+        </a>
+      </div>
+
       <footer className="bg-primary text-primary-foreground py-12 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Мастерская Люкс</h2>
-          <p className="text-primary-foreground/80 mb-6">Перетяжка мебели премиум-класса с 2005 года</p>
+          <h2 className="text-3xl font-bold mb-4">Мастерская Тах-та</h2>
+          <p className="text-primary-foreground/80 mb-6">Перетяжка и ремонт мягкой мебели с 2005 года</p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" size="icon" className="border-primary-foreground/20 hover:bg-primary-foreground/10">
               <Icon name="Instagram" size={20} />
@@ -313,7 +332,7 @@ const Index = () => {
               <Icon name="Youtube" size={20} />
             </Button>
           </div>
-          <p className="text-sm text-primary-foreground/60 mt-8">© 2024 Мастерская Люкс. Все права защищены.</p>
+          <p className="text-sm text-primary-foreground/60 mt-8">© 2024 Мастерская Тах-та. Все права защищены.</p>
         </div>
       </footer>
     </div>
