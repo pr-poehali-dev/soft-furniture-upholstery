@@ -116,7 +116,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-accent/30">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-border shadow-sm">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <img 
@@ -125,26 +125,26 @@ const Index = () => {
               className="h-12 w-12 object-contain"
             />
             <div>
-              <h1 className="text-2xl font-bold text-accent">Мастерская Тах-та</h1>
-              <p className="text-sm text-accent/80">Перетяжка и ремонт мягкой мебели</p>
+              <h1 className="text-2xl font-bold text-primary">Мастерская Тах-та</h1>
+              <p className="text-sm text-muted-foreground">Перетяжка и ремонт мягкой мебели</p>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <div className="text-right">
-              <p className="text-accent/70 text-sm">Работаем ежедневно с 9:00 до 19:00</p>
-              <a href="tel:+79298333318" className="text-accent text-xl font-bold hover:text-accent/80 transition-colors">
+              <p className="text-muted-foreground text-sm">Работаем ежедневно с 9:00 до 19:00</p>
+              <a href="tel:+79298333318" className="text-primary text-xl font-bold hover:text-primary/80 transition-colors">
                 +7 (929) 833-33-18
               </a>
             </div>
           </div>
-          <Button className="bg-accent hover:bg-accent/90 text-primary font-semibold">
+          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
             <Icon name="Phone" size={16} className="mr-2" />
             Позвонить
           </Button>
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-primary to-background">
+      <section className="pt-32 pb-20 px-4 bg-primary">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold text-accent mb-6 animate-fade-in">
             Перетяжка мебели<br />в Новороссийске
@@ -152,29 +152,29 @@ const Index = () => {
           <p className="text-2xl text-accent/90 max-w-2xl mx-auto mb-4 animate-fade-in">
             Бесплатный выезд мастера
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in">
+          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-8 animate-fade-in">
             Работаем быстро и качественно. Гарантия 2 года на все виды работ
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary text-lg px-8 py-6 animate-scale-in">
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 animate-scale-in font-semibold">
             Заказать перетяжку
           </Button>
         </div>
       </section>
 
-      <section id="advantages" className="py-20 px-4 bg-card">
+      <section id="advantages" className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">
             Почему выбирают именно нас?
           </h3>
           <p className="text-center text-muted-foreground mb-12">Наши преимущества</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {advantages.map((item, idx) => (
-              <Card key={idx} className="border-2 border-accent/20 hover:border-accent transition-all hover:shadow-xl bg-primary/50">
+              <Card key={idx} className="border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl bg-card">
                 <CardContent className="pt-6">
-                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
                     <Icon name={item.icon as any} size={32} className="text-accent" />
                   </div>
-                  <h4 className="text-xl font-semibold text-accent mb-2">{item.title}</h4>
+                  <h4 className="text-xl font-semibold text-primary mb-2">{item.title}</h4>
                   <p className="text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
@@ -183,21 +183,21 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-20 px-4 bg-background">
+      <section id="portfolio" className="py-20 px-4 bg-card">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Наши работы</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Наши работы</h3>
           <p className="text-center text-muted-foreground mb-12">Примеры выполненных проектов</p>
           <div className="grid md:grid-cols-3 gap-6">
             {portfolio.map((item, idx) => (
               <div key={idx} className="group cursor-pointer" onClick={() => setSelectedImage(item.image)}>
-                <div className="overflow-hidden rounded-lg border-2 border-accent/30 mb-4 hover:border-accent transition-all">
+                <div className="overflow-hidden rounded-lg border-2 border-primary/20 mb-4 hover:border-accent transition-all">
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <h4 className="text-xl font-semibold text-accent mb-1">{item.title}</h4>
+                <h4 className="text-xl font-semibold text-primary mb-1">{item.title}</h4>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
@@ -225,15 +225,15 @@ const Index = () => {
         </div>
       )}
 
-      <section id="services" className="py-20 px-4 bg-card">
+      <section id="services" className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Наши услуги</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Наши услуги</h3>
           <p className="text-center text-muted-foreground mb-12">Полный спектр работ по ремонту мебели</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, idx) => (
-              <Card key={idx} className="border-2 border-accent/20 hover:border-accent transition-all hover:shadow-lg bg-primary/50">
+              <Card key={idx} className="border-2 border-primary/20 hover:border-accent transition-all hover:shadow-lg bg-card">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-semibold text-accent mb-2">{service.title}</h4>
+                  <h4 className="text-xl font-semibold text-primary mb-2">{service.title}</h4>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
                   <p className="text-2xl font-bold text-accent">{service.price}</p>
                 </CardContent>
@@ -243,9 +243,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-background">
+      <section className="py-20 px-4 bg-card">
         <div className="container mx-auto max-w-4xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Как мы работаем</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Как мы работаем</h3>
           <p className="text-center text-muted-foreground mb-12">Простой процесс от заявки до результата</p>
           <div className="space-y-6">
             {[
@@ -256,10 +256,10 @@ const Index = () => {
               { num: "05", title: "Выполняем работу", text: "Перетяжка и ремонт от 1 до 5 дней" },
               { num: "06", title: "Доставляем готовую", text: "Привозим обновлённую мебель обратно" }
             ].map((step, idx) => (
-              <div key={idx} className="flex gap-6 items-start bg-card p-6 rounded-lg border-2 border-accent/20 hover:border-accent transition-all">
-                <div className="text-5xl font-bold text-accent/30 min-w-[80px]">{step.num}</div>
+              <div key={idx} className="flex gap-6 items-start bg-background p-6 rounded-lg border-2 border-primary/20 hover:border-accent transition-all">
+                <div className="text-5xl font-bold text-accent/40 min-w-[80px]">{step.num}</div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-accent mb-2">{step.title}</h4>
+                  <h4 className="text-2xl font-semibold text-primary mb-2">{step.title}</h4>
                   <p className="text-muted-foreground text-lg">{step.text}</p>
                 </div>
               </div>
@@ -268,46 +268,46 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-card">
+      <section id="contact" className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-2xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Заказать перетяжку</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Заказать перетяжку</h3>
           <p className="text-center text-muted-foreground mb-12">Оставьте заявку, и мастер свяжется с вами в течение 15 минут</p>
-          <Card className="border-2 border-accent/30 bg-primary/50">
+          <Card className="border-2 border-primary/20 bg-card">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-accent mb-2">Ваше имя *</label>
+                  <label className="block text-sm font-medium text-primary mb-2">Ваше имя *</label>
                   <input 
                     type="text" 
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3 bg-background border-2 border-accent/30 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-foreground"
+                    className="w-full px-4 py-3 bg-background border-2 border-input rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-foreground"
                     placeholder="Введите ваше имя"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-accent mb-2">Телефон *</label>
+                  <label className="block text-sm font-medium text-primary mb-2">Телефон *</label>
                   <input 
                     type="tel" 
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full px-4 py-3 bg-background border-2 border-accent/30 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-foreground"
+                    className="w-full px-4 py-3 bg-background border-2 border-input rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-foreground"
                     placeholder="+7 (___) ___-__-__"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold" size="lg">
+                <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" size="lg">
                   Отправить заявку в WhatsApp
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
                   Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                 </p>
               </form>
-              <div className="mt-8 pt-8 border-t border-accent/30 text-center space-y-3">
-                <div className="flex items-center justify-center gap-2 text-accent">
+              <div className="mt-8 pt-8 border-t border-border text-center space-y-3">
+                <div className="flex items-center justify-center gap-2 text-primary">
                   <Icon name="Phone" size={20} />
-                  <a href="tel:+79298333318" className="text-xl font-bold hover:text-accent/80 transition-colors">
+                  <a href="tel:+79298333318" className="text-xl font-bold hover:text-primary/80 transition-colors">
                     +7 (929) 833-33-18
                   </a>
                 </div>
@@ -319,12 +319,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-background">
+      <section className="py-20 px-4 bg-card">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Как нас найти</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Как нас найти</h3>
           <p className="text-center text-muted-foreground mb-12">г. Новороссийск, ул. Кутузовская, 117</p>
           <div className="max-w-5xl mx-auto">
-            <div className="rounded-lg overflow-hidden border-2 border-accent/30 shadow-xl">
+            <div className="rounded-lg overflow-hidden border-2 border-primary/20 shadow-xl">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc7c0e9ab9e8f7f4e3d2b3c0f9e8d7c6d5b4a3c2b1a0&amp;source=constructor"
                 width="100%"
@@ -336,27 +336,27 @@ const Index = () => {
               ></iframe>
             </div>
             <div className="mt-8 grid md:grid-cols-2 gap-6">
-              <Card className="border-2 border-accent/30 bg-card">
+              <Card className="border-2 border-primary/20 bg-background">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <Icon name="MapPin" size={24} className="text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-accent mb-2">Адрес мастерской</h4>
+                      <h4 className="text-xl font-semibold text-primary mb-2">Адрес мастерской</h4>
                       <p className="text-muted-foreground">г. Новороссийск, ул. Кутузовская, 117</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-2 border-accent/30 bg-card">
+              <Card className="border-2 border-primary/20 bg-background">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <Icon name="Clock" size={24} className="text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-accent mb-2">Режим работы</h4>
+                      <h4 className="text-xl font-semibold text-primary mb-2">Режим работы</h4>
                       <p className="text-muted-foreground">Ежедневно с 9:00 до 19:00</p>
                       <p className="text-muted-foreground text-sm mt-1">Без выходных</p>
                     </div>
@@ -387,9 +387,9 @@ const Index = () => {
         </a>
       </div>
 
-      <section className="py-20 px-4 bg-card">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Отзывы клиентов</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-primary mb-4">Отзывы клиентов</h3>
           <p className="text-center text-muted-foreground mb-12">Что говорят о нашей работе</p>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
@@ -430,7 +430,7 @@ const Index = () => {
                 rating: 5
               }
             ].map((review, idx) => (
-              <Card key={idx} className="border-2 border-accent/20 hover:border-accent transition-all bg-primary/50">
+              <Card key={idx} className="border-2 border-primary/20 hover:border-accent transition-all bg-card">
                 <CardContent className="pt-6">
                   <div className="flex gap-1 mb-3">
                     {[...Array(review.rating)].map((_, i) => (
@@ -438,8 +438,8 @@ const Index = () => {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
-                  <div className="flex justify-between items-center pt-4 border-t border-accent/20">
-                    <p className="font-semibold text-accent">{review.name}</p>
+                  <div className="flex justify-between items-center pt-4 border-t border-border">
+                    <p className="font-semibold text-primary">{review.name}</p>
                     <p className="text-sm text-muted-foreground">{review.date}</p>
                   </div>
                 </CardContent>
@@ -449,7 +449,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-accent py-12 px-4 border-t-2 border-accent/30">
+      <footer className="bg-primary text-primary-foreground py-12 px-4 border-t-2 border-border">
         <div className="container mx-auto text-center">
           <div className="flex justify-center mb-4">
             <img 
@@ -458,14 +458,14 @@ const Index = () => {
               className="h-20 w-20 object-contain"
             />
           </div>
-          <h2 className="text-3xl font-bold mb-4">Мастерская Тах-та</h2>
-          <p className="text-accent/80 mb-6">Перетяжка и ремонт мягкой мебели с 2015 года</p>
+          <h2 className="text-3xl font-bold mb-4 text-accent">Мастерская Тах-та</h2>
+          <p className="text-primary-foreground/90 mb-6">Перетяжка и ремонт мягкой мебели с 2015 года</p>
           <div className="flex gap-4 justify-center mb-6">
-            <a href="tel:+79298333318" className="text-xl font-bold hover:text-accent/80 transition-colors">
+            <a href="tel:+79298333318" className="text-xl font-bold text-accent hover:text-accent/80 transition-colors">
               +7 (929) 833-33-18
             </a>
           </div>
-          <p className="text-sm text-accent/60">© 2024 Мастерская Тах-та. Все права защищены.</p>
+          <p className="text-sm text-primary-foreground/70">© 2024 Мастерская Тах-та. Все права защищены.</p>
         </div>
       </footer>
     </div>
