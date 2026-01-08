@@ -124,7 +124,7 @@ const Index = () => {
           </div>
           <div className="hidden md:flex items-center gap-6">
             <div className="text-right">
-              <p className="text-accent/70 text-sm">Работаем ежедневно с 9:00 до 22:00</p>
+              <p className="text-accent/70 text-sm">Работаем ежедневно с 9:00 до 19:00</p>
               <a href="tel:+79298333318" className="text-accent text-xl font-bold hover:text-accent/80 transition-colors">
                 +7 (929) 833-33-18
               </a>
@@ -304,7 +304,7 @@ const Index = () => {
                     +7 (929) 833-33-18
                   </a>
                 </div>
-                <p className="text-muted-foreground">Работаем ежедневно с 9:00 до 22:00</p>
+                <p className="text-muted-foreground">Работаем ежедневно с 9:00 до 19:00</p>
                 <p className="text-muted-foreground">г. Новороссийск, ул. Кутузовская, 117</p>
               </div>
             </CardContent>
@@ -350,7 +350,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold text-accent mb-2">Режим работы</h4>
-                      <p className="text-muted-foreground">Ежедневно с 9:00 до 22:00</p>
+                      <p className="text-muted-foreground">Ежедневно с 9:00 до 19:00</p>
                       <p className="text-muted-foreground text-sm mt-1">Без выходных</p>
                     </div>
                   </div>
