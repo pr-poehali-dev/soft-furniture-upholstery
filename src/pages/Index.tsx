@@ -30,7 +30,7 @@ const Index = () => {
     },
     {
       icon: "Star",
-      title: "Опыт 15+ лет",
+      title: "Опыт 10+ лет",
       description: "Более 800 довольных клиентов доверили нам свою мебель"
     },
     {
@@ -380,10 +380,72 @@ const Index = () => {
         </a>
       </div>
 
+      <section className="py-20 px-4 bg-card">
+        <div className="container mx-auto">
+          <h3 className="text-4xl md:text-5xl font-bold text-center text-accent mb-4">Отзывы клиентов</h3>
+          <p className="text-center text-muted-foreground mb-12">Что говорят о нашей работе</p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Елена Михайловна",
+                date: "15 ноября 2024",
+                text: "Отличная работа! Перетянули диван и два кресла. Мастер приехал в день обращения, подобрали красивую ткань. Всё сделали за 3 дня. Мебель выглядит как новая!",
+                rating: 5
+              },
+              {
+                name: "Андрей К.",
+                date: "2 ноября 2024",
+                text: "Обратился по рекомендации друзей. Качество работы на высоте, цены адекватные. Особенно порадовало, что привезли и забрали мебель бесплатно. Рекомендую!",
+                rating: 5
+              },
+              {
+                name: "Ольга Сергеевна",
+                date: "20 октября 2024",
+                text: "Спасибо огромное мастерам! Старый бабушкин диван выглядит роскошно. Думали уже выбрасывать, но решили попробовать восстановить. Результат превзошёл все ожидания!",
+                rating: 5
+              },
+              {
+                name: "Дмитрий Р.",
+                date: "8 октября 2024",
+                text: "Перетягивали кухонный уголок. Работу выполнили качественно и в срок. Мастер дал хорошие советы по выбору ткани. Всё честно, без скрытых доплат.",
+                rating: 5
+              },
+              {
+                name: "Марина В.",
+                date: "25 сентября 2024",
+                text: "Очень довольна результатом! Отреставрировали старинное кресло, которое досталось от прабабушки. Мастера настоящие профессионалы своего дела. Буду обращаться ещё!",
+                rating: 5
+              },
+              {
+                name: "Игорь Петрович",
+                date: "10 сентября 2024",
+                text: "Сделали перетяжку офисных стульев. Быстро, качественно, по разумной цене. Ребята работают профессионально, вежливые. Советую всем!",
+                rating: 5
+              }
+            ].map((review, idx) => (
+              <Card key={idx} className="border-2 border-accent/20 hover:border-accent transition-all bg-primary/50">
+                <CardContent className="pt-6">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="text-accent fill-accent" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
+                  <div className="flex justify-between items-center pt-4 border-t border-accent/20">
+                    <p className="font-semibold text-accent">{review.name}</p>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-primary text-accent py-12 px-4 border-t-2 border-accent/30">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Мастерская Тах-та</h2>
-          <p className="text-accent/80 mb-6">Перетяжка и ремонт мягкой мебели с 2005 года</p>
+          <p className="text-accent/80 mb-6">Перетяжка и ремонт мягкой мебели с 2015 года</p>
           <div className="flex gap-4 justify-center mb-6">
             <a href="tel:+79298333318" className="text-xl font-bold hover:text-accent/80 transition-colors">
               +7 (929) 833-33-18
