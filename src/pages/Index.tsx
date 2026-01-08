@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const services = [
     {
@@ -138,8 +139,8 @@ const Index = () => {
           <p className="text-center text-muted-foreground mb-12">Примеры наших лучших работ</p>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolio.map((item, idx) => (
-              <div key={idx} className="group cursor-pointer">
-                <div className="overflow-hidden rounded-lg border-2 border-accent/20 mb-4">
+              <div key={idx} className="group cursor-pointer" onClick={() => setSelectedImage(item.image)}>
+                <div className="overflow-hidden rounded-lg border-2 border-accent/20 mb-4 hover:border-accent transition-all">
                   <img 
                     src={item.image} 
                     alt={item.title}
@@ -153,6 +154,26 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-accent hover:text-accent/80 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <Icon name="X" size={40} />
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Увеличенное изображение"
+            className="max-w-full max-h-full object-contain animate-scale-in rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <section id="process" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
