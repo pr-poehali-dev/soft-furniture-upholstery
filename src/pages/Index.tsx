@@ -146,16 +146,26 @@ const Index = () => {
 
       <section className="pt-32 pb-20 px-4 bg-primary">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-accent mb-6 animate-fade-in">
-            Перетяжка мебели<br />Новороссийск - Геленджик
+          <div className="inline-block bg-accent/20 px-6 py-2 rounded-full mb-6 animate-fade-in">
+            <p className="text-accent font-semibold text-lg">✨ Бесплатный выезд мастера</p>
+          </div>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-accent mb-8 animate-fade-in leading-tight">
+            Перетяжка мягкой мебели<br />
+            <span className="text-accent/90">Новороссийск - Геленджик</span>
           </h2>
-          <p className="text-2xl text-accent/90 max-w-2xl mx-auto mb-4 animate-fade-in">
-            Бесплатный выезд мастера
-          </p>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-8 animate-fade-in">
-            Работаем быстро и качественно. Гарантия 2 года на все виды работ
-          </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 animate-scale-in font-semibold">
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <a 
+              href="tel:+79298333318" 
+              className="flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-2xl text-2xl md:text-3xl font-bold transition-all hover:scale-105 shadow-lg animate-scale-in"
+            >
+              <Icon name="Phone" size={32} />
+              +7 (929) 833-33-18
+            </a>
+            <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto animate-fade-in">
+              Работаем быстро и качественно. Гарантия 2 года на все виды работ
+            </p>
+          </div>
+          <Button size="lg" className="bg-accent/20 hover:bg-accent/30 text-accent border-2 border-accent text-lg px-8 py-6 animate-fade-in font-semibold">
             Заказать перетяжку
           </Button>
         </div>
